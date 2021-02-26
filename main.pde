@@ -1,7 +1,7 @@
 import themidibus.*; //Import the library
 
 MidiBus myBus; // The MidiBus
-Circles circles;
+Lines lines;
 Sinus sinus;
 Kaleido kaleido;
 
@@ -17,7 +17,7 @@ void setup() {
   MidiBus.list(); // List all available Midi devices on STDOUT. This will show each device's index and name.
   myBus = new MidiBus(this, 0, 1); // Create a new MidiBus using the device index to select the Midi input and output devices respectively.
   
-  circles = new Circles();
+  lines = new Lines();
   sinus = new Sinus();
   kaleido = new Kaleido();
   for(int i = 0; i < 200; i ++) {
@@ -28,8 +28,8 @@ void setup() {
 void draw() {
   background(0);
   
-  if (state == "circles") {
-  circles.draw(x, xx, y , yy, stroke);
+  if (state == "lines") {
+  lines.draw(x, xx, y , yy, stroke);
   } else if (state == "sinus") {
   sinus.draw();
   } else if (state == "kaleido") {
@@ -43,7 +43,7 @@ void draw() {
  
 void keyPressed() {
   if (key == '1') {
-   state = "circles";
+   state = "lines";
   } else if (key == '2') {
     state = "sinus";
   } else if (key == '3') {
