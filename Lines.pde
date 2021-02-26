@@ -1,15 +1,16 @@
+float x = random(100, 120);
+float xx = random (300, 320); 
+float y = 0;
+float yy = 0;
+float[] stroke = {255, 255, 255};
+
+
 class Lines {
 
-  float x = random(100, 120);
-  float xx = random (300, 320); 
-  float y = 0;
-  float yy = 0;
   float xoff = 0;
   float xxoff = 0;
   float off = 0;
   float add = 360;
-  float[] stroke = {255, 255, 255};
-  
   
 void draw(float x, float xx, float y, float yy, float stroke[]) {
   translate(width/2, height/2);
