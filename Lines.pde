@@ -1,4 +1,4 @@
-class Circles {
+class Lines {
 
   float x = random(100, 120);
   float xx = random (300, 320); 
